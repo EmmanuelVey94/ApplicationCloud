@@ -63,6 +63,8 @@ mark {
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
+	color:black;
+
 }
 
 input, select, textarea {
@@ -70,6 +72,11 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+	color:black;
+	font-family: "Source Sans Pro", sans-serif;
+		font-weight: 300;
+		font-size: 1rem;
+		line-height: 1.65;
 }
 
 /* Basic */
@@ -139,7 +146,7 @@ input, select, textarea {
 
 		}
 
-	body, input, select, textarea {
+	body, select, textarea {
 		color: #ffffff;
 		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
