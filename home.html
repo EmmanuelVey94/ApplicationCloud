@@ -64,41 +64,61 @@
 								<h2 class="major">Requêtes</h2>
 								<span class="image main"><img src="images/mongoDBSchema.PNG" alt="" /></span>
 
+								<script type="text/javascript">
+									function requetes1() { 
+										var input = document.getElementById("input1").value;
+										document.getElementById("reponse1").value = "{"+input+",fruit}";}
+									function requetes2() { 
+										var input = document.getElementById("input2").value;
+										document.getElementById("reponse2").value = "{"+input+",fruit}";}
+									function requetes3() { 
+										var input = document.getElementById("input3").value;
+										document.getElementById("reponse3").value = "{"+input+",fruit}";}
+									function requetes4() { 
+										var input = document.getElementById("input4").value;
+										document.getElementById("reponse4").value = "{"+input+",fruit}";}
+									function requetes5() { 
+										document.getElementById("reponse5").value = "{fruit}";}
+									function requetes6() { 
+										document.getElementById("reponse6").value = "{fruit}";}
+									function requetes7() { 
+										document.getElementById("reponse7").value = "{fruit}";}	
+								</script>
 								<h3>Demande des caractéristiques basique d’un employé par numéro d’employé</h3>
 								<h4>Numéro d'employé</h4>
-								<input type="" name="numEmp">
-								<button>Execute</button>
-								<textarea></textarea>
+								<input id="input1">
+								<button onclick="requetes1()">Executer</button>
+								<textarea id="reponse1"></textarea>
 
 								<h3>Demander tous les employés d’un département</h3>
 								<h4>Numéro de département</h4>
-								<input type="" name="numDep">
-								<button>Execute</button>
-								<textarea></textarea>
+								<input id="input2">
+								<button onclick="requetes2()">Executer</button>
+								<textarea id="reponse2"></textarea>
 
 								<h3>La moyenne des salaires et le nombre d’employés pour un numéro de département.</h3>
 								<h4>Numéro de département</h4>
-								<input type="" name="numDep">
-								<button>Execute</button>
-								<textarea></textarea>
+								<input id="input3">
+								<button onclick="requetes3()">Executer</button>
+								<textarea id="reponse3"></textarea>
 
 								<h3>Nombre de salariés pour un numéro de département groupé par tranche de 3 mois.</h3>
 								<h4>Numéro de département</h4>
-								<input type="" name="numDep">
-								<button>Execute</button>
-								<textarea></textarea>
+								<input id="input4">
+								<button onclick="requetes4()">Executer</button>
+								<textarea id="reponse4"></textarea>
 
 								<h3>Salaire moyen et Temps moyen qu’une personne reste par catégorie de poste (senior/classique/assistant) avant de passer au poste de catégorie supérieur</h3>
-								<button>Execute</button>
-								<textarea></textarea>
+								<button onclick="requetes5()">Executer</button>
+								<textarea id="reponse5"></textarea>
 
 								<h3>Pour chaque catégorie d’employé (senior/classique/assistant) le salaire moyen par département.</h3>
-								<button>Execute</button>
-								<textarea></textarea>
+								<button onclick="requetes6()">Executer</button>
+								<textarea id="reponse6"></textarea>
 
 								<h3>Les 70 employés restés le plus longtemps dans la société.</h3>
-								<button>Execute</button>
-								<textarea></textarea>
+								<button onclick="requetes7()">Executer</button>
+								<textarea id="reponse7"></textarea>
 
 							</article>
 
