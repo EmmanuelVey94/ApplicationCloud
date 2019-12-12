@@ -6,7 +6,7 @@ function requetes1() {
     //textarea.value = "{\n\t\"emp_no\" : "+ input +",\n\t\"birthe_date\" : 18/03/1997,\n\t\"first_name\" : Jean,\n\t\"last_name\" : Dupond\n}";      
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'https://jsonplaceholder.typicode.com/todos/1ezd' +'?'+input, true)
+    request.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true)
     request.onload = function() {
       // Begin accessing JSON data here
 
