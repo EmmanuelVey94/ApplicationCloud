@@ -5,7 +5,7 @@ function requetes1() {
     textarea = document.getElementById("reponse1");
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true)
+    request.open('GET', 'https://jsonplaceholder.typicode.com/todos/1' +'?'+input, true)
     request.onload = function() {
       // Begin accessing JSON data here
 
@@ -23,7 +23,7 @@ function requetes2() {
     textarea = document.getElementById("reponse2");
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'localhost:8080/api/endpoint2', true)
+    request.open('GET', 'localhost:8080/api/endpoint2' +'?'+input, true)
     request.onload = function() {
       // Begin accessing JSON data here
         var data = JSON.parse(this.response)
@@ -41,7 +41,7 @@ function requetes3() {
     textarea = document.getElementById("reponse3");
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'localhost:8080/api/endpoint3', true)
+    request.open('GET', 'localhost:8080/api/endpoint3' +'?'+input, true)
     request.onload = function() {
       // Begin accessing JSON data here
         var data = JSON.parse(this.response)
@@ -59,7 +59,7 @@ function requetes4() {
     textarea = document.getElementById("reponse4");
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'localhost:8080/api/endpoint4', true)
+    request.open('GET', 'localhost:8080/api/endpoint4' +'?'+input, true)
     request.onload = function() {
       // Begin accessing JSON data here
         var data = JSON.parse(this.response)
