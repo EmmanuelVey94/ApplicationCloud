@@ -6,8 +6,8 @@ function requetes1() {
 
     var request = new XMLHttpRequest()
 
-    request.open('GET', 'https://localhost:8080/api/employee/'+input, true)
-    request.setRequestHeader("Access-Control-Allow-Origin","https://localhost:8080")
+    request.open('GET', 'http://localhost:8080/api/employee/'+input, true)
+    request.setRequestHeader("Access-Control-Allow-Origin","http://localhost:8080")
     request.onload = function() {
       // Begin accessing JSON data here
         console.log(this.response)
@@ -17,6 +17,7 @@ function requetes1() {
             textarea.value = "Bad status : "+ request.statusText ;                
         }
     }
+    request.send()
 }
 function requetes2() { 
 

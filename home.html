@@ -48,9 +48,27 @@
 						<!-- Mise en place -->
 							<article id="work">
 								<h2 class="major">Mise en place</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								<h3>Lancement des VM pour la base de données</h3>
+								<p>Nous partons du principe que la base de données à été initialisée et que nous voulons la lancer pour qu’elle soit appelable par l’API qu’utilise l’application. Nous suivrons l’architecture suivante :  </p>
+								<span class="image main"><img src="images/schema.PNG" alt="" /></span>
+								<h3>Lancement du ConfigServer :</h3>
+								<ul>
+									<li>Après log in dans la VM, il faut utiliser de la commande « mongod -f conf/mongo_configSvr.conf » qui configure le serveur grâce au fichier mongo_configSvr.conf.</li>
+									<li>On lance ensuite le serveur en utilisant la commande « mongo --host devincimdb2059 --port 27018 ».</li>
+								</ul>
+								<h3>Lancement des mongod :</h3>
+								<ul>
+									<li>Après log in dans la VM, il faut utiliser de la commande « mongod -f conf/mongo_RSX.conf » qui configure le serveur grâce au fichier mongo_RSX.conf où le X est remplacé par le numéro de la shard.</li>
+									<li>On lance ensuite le serveur en utilisant la commande « mongo --host Y » où Y est remplacé par le nom de la shard</li>
+								</ul>
+								<h3>Lancement du mongos :</h3>
+								<ul>
+									<li>Après log in dans la VM, il faut utiliser de la commande « mongos -f conf/mongos.conf » qui configure le serveur grâce au fichier mongos.conf.</li>
+									<li>On lance ensuite le serveur en utilisant la commande « mongo --host devincimdb2057 --port 30000 ».</li>
+								</ul>
+								<p>Après toute ces étapes, l’API peut faire des requêtes à la base mongo en utilisant l’adresse ssh du serveur mongos.</p>
+ 
+
 							</article>
 
 						<!-- requetes d'un utilisateur standard -->
