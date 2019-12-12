@@ -1,22 +1,22 @@
 
 function requetes1() { 
-
     input = document.getElementById("input1").value;
     textarea = document.getElementById("reponse1");
     //textarea.value = "{\n\t\"emp_no\" : "+ input +",\n\t\"birthe_date\" : 18/03/1997,\n\t\"first_name\" : Jean,\n\t\"last_name\" : Dupond\n}";      
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true)
+
+    request.open('GET', 'https://localhost:8080/api/employee/'+input, true)
+    request.setRequestHeader("Access-Control-Allow-Origin","https://localhost:8080")
     request.onload = function() {
       // Begin accessing JSON data here
-
+        console.log(this.response)
         if (request.status >= 200 && request.status < 400) {
-            textarea.value = this.response;
+            textarea.value = this.response.data[0];
         } else {
             textarea.value = "Bad status : "+ request.statusText ;                
         }
     }
-    request.send()
 }
 function requetes2() { 
 
