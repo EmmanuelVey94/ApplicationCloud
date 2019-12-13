@@ -143,10 +143,32 @@ exports.requetes6 = function(req, res) {
 };
 
 exports.requetes7 = function(req, res) {
-  employee.find({ Emp_no: req.params.emp_no }, function(err, employee) {
-    if (err) res.send(err);
-    res.json({
-      data: employee
-    });
-  });
+  employee.mapReduce(
+    function() {
+      for (var i = 0; this.Salaries.length; i++) {
+        var array = [];
+        for (var j = 0; array.length; j++) {
+          array[i] =
+            (this.Salaries[i].From_date - this.Salaries[i].To_date) /
+            2629800000;
+        }
+        array.sort(function(a, b) {
+          return b - a;
+        });
+        for (var k = 0; 70; k++) {
+          emit(this.Emp_no, 1);
+        }
+      }
+    },
+    function(key, values) {
+      return Array.sum(values);
+    },
+    { query: {}, out: { inline: true } },
+    function(err, employee) {
+      if (err) res.send(err);
+      res.json({
+        data: employee
+      });
+    }
+  );
 };
