@@ -23,7 +23,7 @@ exports.requetes1 = function(req, res) {
     console.log(employee);
     if (err) res.send(err);
     res.json({
-      data: employee
+      employee
     });
   });
 };
@@ -35,7 +35,7 @@ exports.requetes2 = function(req, res) {
   ) {
     if (err) res.send(err);
     res.json({
-      data: employee
+      employee
     });
   });
 };
@@ -56,7 +56,7 @@ exports.requetes3 = function(req, res) {
     function(err, employee) {
       if (err) res.send(err);
       res.json({
-        data: employee
+        employee
       });
     }
   );
@@ -85,7 +85,7 @@ exports.requetes4 = function(req, res) {
     function(err, employee) {
       if (err) res.send(err);
       res.json({
-        data: employee
+        employee
       });
     }
   );
@@ -114,7 +114,7 @@ exports.requetes5 = function(req, res) {
     function(err, employee) {
       if (err) res.send(err);
       res.json({
-        data: employee
+        employee
       });
     }
   );
@@ -136,7 +136,7 @@ exports.requetes6 = function(req, res) {
     function(err, employee) {
       if (err) res.send(err);
       res.json({
-        data: employee
+        employee
       });
     }
   );

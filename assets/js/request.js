@@ -12,7 +12,7 @@ function requetes1() {
       // Begin accessing JSON data here
         console.log(this.response)
         if (request.status >= 200 && request.status < 400) {
-            textarea.value = this.response.data[0];
+            textarea.value = this.response;
         } else {
             textarea.value = "Bad status : "+ request.statusText ;                
         }
