@@ -25,7 +25,7 @@ function requetes2() {
     textarea = document.getElementById("reponse2");
     //textarea.value = "{\n\t\"emp_no\" : d25632,\n\t\"birthe_date\" : 18/03/1997,\n\t\"first_name\" : Jean,\n\t\"last_name\" : Dupond\n}\n{\n\t\"emp_no\" : d35896,\n\t\"birthe_date\" : 04/06/1958,\n\t\"first_name\" : Maurice,\n\t\"last_name\" : Vangre\n}";
     var request = new XMLHttpRequest()
-    request.open('GET', 'http://localhost:8080/api/endpoint2/:'+input, true)
+    request.open('GET', 'http://localhost:8080/api/employees/'+input, true)
     request.onload = function() {
       // Begin accessing JSON data here
         var data = JSON.parse(this.response)
@@ -39,11 +39,10 @@ function requetes2() {
 }
 function requetes3() { 
 
-    input = document.getElementById("input3").value;
     textarea = document.getElementById("reponse3");
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'localhost:8080/api/endpoint3/:'+input, true)
+    request.open('GET', 'localhost:8080/api/mean_salary', true)
     request.onload = function() {
       // Begin accessing JSON data here
         var data = JSON.parse(this.response)
@@ -57,11 +56,10 @@ function requetes3() {
 }
 function requetes4() { 
 
-    input = document.getElementById("input3").value;
     textarea = document.getElementById("reponse4");
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'localhost:8080/api/endpoint4/:'+input, true)
+    request.open('GET', 'localhost:8080/api/no_employees', true)
     request.onload = function() {
       // Begin accessing JSON data here
         var data = JSON.parse(this.response)
@@ -78,7 +76,7 @@ function requetes5() {
     textarea = document.getElementById("reponse5");
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'localhost:8080/api/endpoint5', true)
+    request.open('GET', 'localhost:8080/api/mean_time', true)
     request.onload = function() {
       // Begin accessing JSON data here
         var data = JSON.parse(this.response)
@@ -95,7 +93,7 @@ function requetes6() {
     textarea = document.getElementById("reponse6");
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'localhost:8080/api/endpoint6', true)
+    request.open('GET', 'localhost:8080/api/mean_salary_by_dept', true)
     request.onload = function() {
       // Begin accessing JSON data here
         var data = JSON.parse(this.response)
@@ -112,7 +110,7 @@ function requetes7() {
     textarea = document.getElementById("reponse7");
 
     var request = new XMLHttpRequest()
-    request.open('GET', 'localhost:8080/api/endpoint7', true)
+    request.open('GET', 'localhost:8080/api/longest_standing_employees', true)
     request.onload = function() {
       // Begin accessing JSON data here
         var data = JSON.parse(this.response)
