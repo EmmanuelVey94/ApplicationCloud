@@ -29,7 +29,10 @@ router.route("/no_employees").get(employeeController.requetes4);
 router.route("/mean_time").get(employeeController.requetes5);
 
 //example : /api/mean_salary_by_dept
-router.route("/mean_salary_by_dept").get(employeeController.requetes5);
+router.route("/mean_salary_by_dept").get(employeeController.requetes6);
+
+//example : /api/longest_standing_employees
+router.route("/longest_standing_employees").get(employeeController.requetes7);
 
 // Export API routes
 module.exports = router;
